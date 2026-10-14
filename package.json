@@ -1,0 +1,9 @@
+{
+  "name": "agent-world-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned restricted browser executor for Agent World Lab",
+  "dependencies": {
+    "@playwright/cli": "0.1.22"
+  }
+}

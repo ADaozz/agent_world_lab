@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-world-lab"
+version = "0.1.0"
+description = "Auditable experiments with a minimal prompt and an asynchronous object world"
+requires-python = ">=3.12"
+dependencies = ["openai>=1.55,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[project.scripts]
+world-lab = "lab.main:main"
+
+[tool.setuptools.packages.find]
+include = ["lab*"]
+
+[tool.setuptools.package-data]
+"lab.tools" = ["*.cjs"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
